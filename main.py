@@ -17,8 +17,8 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 # Page configuration
 st.set_page_config(
-    page_title="US Population Dashboard",
-    page_icon="🏂",
+    page_title="DeepNexus Studio",
+    page_icon="artificial-intelligence.png",
     layout="wide",
     initial_sidebar_state="expanded")
 
@@ -76,22 +76,58 @@ st.markdown("""
 #######################
 # Sidebar
 with st.sidebar:
-    st.title('🏂 US Population Dashboard')
-    
-    project = ['Sentiment Analysis','Next word Prediction','Text Classification']
-    
+    st.markdown("""
+        <style>
+        .my-icon {
+        background-image: url('artificial-intelligence.png');
+        }
+        </style>
+        <div class='my-icon'></div>
+        """, unsafe_allow_html=True)
+    st.title('DeepNexus')
+
+    project = ['Go to homepage','Sentiment Analysis','Next word Prediction','Text Classification']
     selected_project= st.selectbox('Select a year', project)
-    #df_selected_year = df_reshaped[df_reshaped.year == selected_year]
-    #df_selected_year_sorted = df_selected_year.sort_values(by="population", ascending=False)
 
     color_theme_list = ['blues', 'cividis', 'greens', 'inferno', 'magma', 'plasma', 'reds', 'rainbow', 'turbo', 'viridis']
     selected_color_theme = st.selectbox('Select a color theme', color_theme_list)
 
 
 #######################
+if selected_project == 'Go to homepage':
 
+    st.markdown("<h1 style='text-align: center; color: white; font-size:28px;'>Welcome to DeepNexus Studio!</h1>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center; font-size:56px;'<p>&#129302;</p></h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center; color: grey; font-size:20px;'>The term <b>Deep</b> signifies the use of deep learning, a branch of artificial intelligence that focuses on complex neural networks to model and understand intricate patterns in data. <b>Nexus</b> represents a connection or link, emphasizing how your application serves as a central hub that connects advanced deep learning techniques with practical natural language processing (NLP) tasks. <b>Studio</b> suggests a creative space or environment where users can interact with and explore these sophisticated technologies.Together, <b>DeepNexus Studio</b> conveys the idea of a powerful, connected platform where deep learning meets NLP, offering users an intuitive and innovative space to work with cutting-edge text analysis tools.</h3>", unsafe_allow_html=True)
+    st.write("")
+    st.write("")
+    
+    st.markdown("""
+    <div style="text-align: center;">
+        <a href="https://github.com/aliarmaghan">
+            <img src="https://img.shields.io/github/stars/dlopezyse/Synthia.svg?logo=github&style=social" alt="Star">
+        </a>
+        <a href="https://x.com/armaghan78">
+            <img src="https://img.shields.io/twitter/follow/armaghan78?style=social" alt="Follow">
+        </a>
+        <a href="https://www.buymeacoffee.com/lopezyse">
+            <img src="https://img.shields.io/badge/Buy%20me%20a%20coffee--yellow.svg?logo=buy-me-a-coffee&logoColor=orange&style=social" alt="Buy me a coffee">
+        </a>
+    </div>
+    """, unsafe_allow_html=True)
+    st.markdown('___')
+    st.write(':point_left: Use the menu at left to select a task (click on > if closed).')
+    st.markdown('___')
+    st.markdown("<h3 style='text-align: left; color:#F63366; font-size:18px;'><b>What is this App about?<b></h3>", unsafe_allow_html=True)
+    st.write("Learning happens best when content is personalized to meet our needs and strengths.")
+    st.write("For this reason I created InsightGenie :robot_face:, the AI system to accelerate and design your knowledge in seconds!InsightGenie: Your AI-powered genie for smart predictions and insights. Whether it's recommending the perfect movie, classifying emails, or summarizing text, InsightGenie works like magic to provide accurate and reliable results. Let InsightGenie handle the complex tasks effortlessly, making your experience seamless and efficient.")     
+    st.markdown("<h3 style='text-align: left; color:#F63366; font-size:18px;'><b>Who is this App for?<b></h3>", unsafe_allow_html=True)
+    st.write("Anyone can use this App completely for free! If you like it :heart:, show your support by sharing :+1: ")
+    st.write("Are you into NLP? Our code is 100% open source and written for easy understanding. Fork it from [GitHub] (https://github.com/aliarmaghan), and pull any suggestions you may have. Become part of the community! Help yourself and help others :smiley:")
+
+#-----------------------------------------
 # ---------------------------- Sentiment Analysis --------------------------------#
-if selected_project == 'Sentiment Analysis':
+elif selected_project == 'Sentiment Analysis':
 
     # Load the IMDB dataset word index
     word_index = imdb.get_word_index()
