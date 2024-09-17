@@ -96,7 +96,7 @@ with st.sidebar:
 #######################
 if selected_project == 'Go to homepage':
 
-    st.markdown("<h1 style='text-align: center; color: white; font-size:28px;'>Welcome to DeepNexus Studio!</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: DarkSalmon; font-size:28px;'>Welcome to DeepNexus Studio!</h1>", unsafe_allow_html=True)
     st.markdown("<h3 style='text-align: center; font-size:56px;'<p>&#129302;</p></h3>", unsafe_allow_html=True)
     st.markdown("<h3 style='text-align: center; color: grey; font-size:20px;'>The term <b>Deep</b> signifies the use of deep learning, a branch of artificial intelligence that focuses on complex neural networks to model and understand intricate patterns in data. <b>Nexus</b> represents a connection or link, emphasizing how your application serves as a central hub that connects advanced deep learning techniques with practical natural language processing (NLP) tasks. <b>Studio</b> suggests a creative space or environment where users can interact with and explore these sophisticated technologies.Together, <b>DeepNexus Studio</b> conveys the idea of a powerful, connected platform where deep learning meets NLP, offering users an intuitive and innovative space to work with cutting-edge text analysis tools.</h3>", unsafe_allow_html=True)
     st.write("")
