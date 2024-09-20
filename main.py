@@ -79,7 +79,7 @@ with st.sidebar:
     st.markdown("""
         <style>
         .my-icon {
-        background-image: url('artificial-intelligence.png');
+        image: url('artificial-intelligence.png');
         }
         </style>
         <div class='my-icon'></div>
@@ -120,7 +120,16 @@ if selected_project == 'Go to homepage':
     st.markdown('___')
     st.markdown("<h3 style='text-align: left; color:#F63366; font-size:18px;'><b>What is this App about?<b></h3>", unsafe_allow_html=True)
     st.write("Learning happens best when content is personalized to meet our needs and strengths.")
-    st.write("For this reason I created InsightGenie :robot_face:, the AI system to accelerate and design your knowledge in seconds!InsightGenie: Your AI-powered genie for smart predictions and insights. Whether it's recommending the perfect movie, classifying emails, or summarizing text, InsightGenie works like magic to provide accurate and reliable results. Let InsightGenie handle the complex tasks effortlessly, making your experience seamless and efficient.")     
+    st.write("""DeepNexus Studio is an innovative web application that merges the latest deep learning techniques with natural language processing (NLP) to provide powerful, real-time text analysis tools. The platform features two core functionalities:
+        Sentiment Analysis: Utilizing a Simple Recurrent Neural Network (SimpleRNN), DeepNexus Studio analyzes and classifies the sentiment of text, particularly movie reviews, into positive or negative categories based on trained data from the IMDB dataset.
+        Next Word Prediction: Powered by a Long Short-Term Memory (LSTM) model, the application predicts the next word in a given sequence, aiding users in completing sentences or generating text continuations that are contextually accurate and coherent.
+        Key Features of DeepNexus Studio:
+        Interactive User Interface: The platform offers a sleek, user-friendly dashboard where users can easily input text, choose between the sentiment analysis and next word prediction features, and receive immediate feedback.
+        Real-Time Results: DeepNexus Studio is designed for real-time text processing, providing instant predictions with high accuracy.
+        Advanced Deep Learning Models: Built with TensorFlow/Keras, the application integrates state-of-the-art deep learning models to deliver precise and reliable NLP outcomes.
+        Customizable Experience: Users can personalize their experience with various visual themes, enhancing their interaction with the application.
+
+        Technology Stack: DeepNexus Studio is developed using Python, TensorFlow/Keras, Streamlit, Pandas, NumPy, and Pickle, ensuring a robust and scalable platform.""")     
     st.markdown("<h3 style='text-align: left; color:#F63366; font-size:18px;'><b>Who is this App for?<b></h3>", unsafe_allow_html=True)
     st.write("Anyone can use this App completely for free! If you like it :heart:, show your support by sharing :+1: ")
     st.write("Are you into NLP? Our code is 100% open source and written for easy understanding. Fork it from [GitHub] (https://github.com/aliarmaghan), and pull any suggestions you may have. Become part of the community! Help yourself and help others :smiley:")
